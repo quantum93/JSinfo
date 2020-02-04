@@ -1,4 +1,6 @@
-var person = {
+'use strict';
+
+const person = {
     firstName : "John",
     lastName : "Doe",
     id : 5566,
@@ -7,4 +9,5 @@ var person = {
     }
 };
 
-console.log(person.firstName, person.lastName, person.fullName());
+const name = person.fullName();
+console.log(person.firstName, person.lastName, person.fullName(), name);
