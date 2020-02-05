@@ -30,3 +30,20 @@ console.log(person.firstName, person.lastName,
  * 하나는 객체 생성자 다른 하나는 object literal */
 let user1 = new Object();
 let user2 = {}
+
+user1.firstName = "Tae"; /** user1의 빈 객체 안에 key 로 firstName 값으로 Tae를 삽입 */
+user2["multi word"] = true; /** user2.["multi word"] 는 불가능하다. .은 유효한 변수에만 적용 */
+
+const myKey = "Don't hurry";
+user2[myKey] = true; /** user2.myKey = true 하면 undefined가 반환된다! */
+
+console.log(user1.firstName, user2["multi word"], user2[myKey]);
+
+/** 아래의 구문으로 이제까지의 내용을 정리한다. */
+const newUser = {
+    name: "John",
+    age: 30,
+};
+
+let newKey = newUser.name; 
+console.log(newKey);
